@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Benim Portfolyo Sitem</title>
+  <title>Portfolyo</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -12,10 +12,10 @@
   <nav class="flex justify-between items-center px-6 py-4 bg-gradient-to-r from-black via-gray-900 to-blue-900 shadow-lg">
     <h1 class="text-2xl font-bold">Portfolyo</h1>
     <ul class="flex space-x-6">
-      <li><a href="#portfolio" class="hover:text-blue-400 transition">Portfolyo</a></li>
-      <li><a href="#yazilar" class="hover:text-blue-400 transition">Yazılarım</a></li>
-      <li><a href="#video" class="hover:text-blue-400 transition">Video</a></li>
-      <li><a href="#foto" class="hover:text-blue-400 transition">Fotoğraf Arşivi</a></li>
+      <li><a href="index.html" class="hover:text-blue-400 transition">Portfolyo</a></li>
+      <li><a href="yazilar.html" class="hover:text-blue-400 transition">Yazılarım</a></li>
+      <li><a href="video.html" class="hover:text-blue-400 transition">Video</a></li>
+      <li><a href="foto.html" class="hover:text-blue-400 transition">Fotoğraf Arşivi</a></li>
     </ul>
     <button id="themeToggle" class="px-3 py-2 bg-blue-600 rounded-lg hover:bg-blue-500 transition">Tema Değiştir</button>
   </nav>
@@ -36,36 +36,6 @@
     </div>
   </section>
 
-  <!-- Yazılarım -->
-  <section id="yazilar" class="p-10 bg-gray-900">
-    <h3 class="text-3xl font-bold mb-6 text-blue-400">Yazılarım</h3>
-    <div class="space-y-4">
-      <article class="p-6 bg-gray-800 rounded-2xl shadow-lg">Yazı 1 - Kısa açıklama</article>
-      <article class="p-6 bg-gray-800 rounded-2xl shadow-lg">Yazı 2 - Kısa açıklama</article>
-      <article class="p-6 bg-gray-800 rounded-2xl shadow-lg">Yazı 3 - Kısa açıklama</article>
-    </div>
-  </section>
-
-  <!-- Video -->
-  <section id="video" class="p-10">
-    <h3 class="text-3xl font-bold mb-6 text-blue-400">Video</h3>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-gray-800 rounded-2xl p-4 shadow-lg">Video 1 (örnek embed yeri)</div>
-      <div class="bg-gray-800 rounded-2xl p-4 shadow-lg">Video 2 (örnek embed yeri)</div>
-    </div>
-  </section>
-
-  <!-- Fotoğraf Arşivi -->
-  <section id="foto" class="p-10 bg-gray-900">
-    <h3 class="text-3xl font-bold mb-6 text-blue-400">Fotoğraf Arşivi</h3>
-    <div class="grid md:grid-cols-4 gap-4">
-      <div class="bg-gray-800 h-40 rounded-2xl"></div>
-      <div class="bg-gray-800 h-40 rounded-2xl"></div>
-      <div class="bg-gray-800 h-40 rounded-2xl"></div>
-      <div class="bg-gray-800 h-40 rounded-2xl"></div>
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer class="bg-black text-center py-6 border-t border-gray-700">
     <p class="mb-4">Sosyal Medya</p>
@@ -76,22 +46,20 @@
     </div>
   </footer>
 
+  <!-- Tema Değiştir -->
   <script>
     lucide.createIcons();
-
     const themeToggle = document.getElementById('themeToggle');
     const body = document.getElementById('body');
-
     let darkMode = true;
-
     themeToggle.addEventListener('click', () => {
       darkMode = !darkMode;
       if (darkMode) {
-        body.classList.remove('bg-white', 'text-black');
-        body.classList.add('bg-black', 'text-white');
+        body.classList.remove('bg-white','text-black');
+        body.classList.add('bg-black','text-white');
       } else {
-        body.classList.remove('bg-black', 'text-white');
-        body.classList.add('bg-white', 'text-black');
+        body.classList.remove('bg-black','text-white');
+        body.classList.add('bg-white','text-black');
       }
     });
   </script>
